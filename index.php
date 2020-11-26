@@ -445,42 +445,6 @@ function c_code_list(){
 
 }
 
-function m_code_list(){
-	var frm = "#sForm"; // 동작시킬 form 
-	var validate = $(frm +' [validate]'); // 유효성 체크 함수 필요없으면 생략해도 됨
-	if(fnc_validate(validate) == false){
-		return  ;
-	}
-	if(load_proc)
-		return;
-
-	load_proc = true; // 동작 에러 체크를 위한 변수
-	//결과처리
-	
-	var successfuc = function(data){
-		document.getElementById("M_CODE").innerHTML ="<option value='선택'>선택</option>";
-		if(data != ""){
-			
-			if (data.m_list != null && document.getElementById("C_CODE").value != ""){
-				var optionhtml = "<option value='선택'>선택</option>";
-				for(var m_code_i = 0; m_code_i < data.m_list.length; m_code_i++){
-					optionhtml += "<option>"+data.m_list[m_code_i]['model']+"</option>";
-				}
-				
-				document.getElementById("M_CODE").innerHTML =optionhtml;
-			}
-		}
-
-		load_proc = false;
-	};
-	var str_data =  $(frm).serialize();
-	var link = "/_interface/stock/stock_select_list.php";
-
-	loadjson(link ,str_data , successfuc); // ajax 동작 - 지정된 url(link)로 데이터(str_data)를 가지고 동작 후 성공여부(successfuc) 리턴
-
-}
-
-
 //-->
 </script>
 
@@ -563,6 +527,31 @@ function m_code_list(){
                                         <col width="100px">
                                         </colgroup>
 
+                                        <thead>
+                                            <tr class="ag_c">
+												<td><input id="ckbox_all" type="checkbox"></td>
+                                                <td>순번</td>
+                                                <td>견적기유형</td>
+                                                <td>출고일</td>
+                                                <td>개소세기준</td>
+                                                <td>제조사</td>
+                                                <td>차종</td>
+                                                <td>모델</td>
+                                                <td>외장색</td>
+                                                <td>내장색</td>
+                                                <td>옵션</td>
+                                                <td>할인</td>
+                                                <td>총차량가</td>
+                                                <td>차량가</td>
+                                                <td>옵션가</td>
+                                                <td>제조사탁송료</td>
+                                                <td>블박/전면썬팅지원</td>
+                                                <td>추가수수료</td>
+                                                <td>연식</td>
+                                                <td>현황</td>
+                                                <td>재고</td>
+                                            </tr>
+                                        </thead>
                                         <thead>
                                             <tr class="ag_c">
 												<td><input id="ckbox_all" type="checkbox"></td>
@@ -822,6 +811,24 @@ function m_code_list(){
 <script id="tmpl__list" type="text/x-jquery-tmpl">
 		<tr  class="ag_c">
 			<td ><input class="check_box" type="checkbox"></td>
+			<td >${seq_no}</td>
+			<td >${estm_cd}</td>
+			<td >${release_date}</td>
+			<td>${tax_cd}</td>
+			<td>${asdf}</td>
+			<td>${qwer}</td>
+			<td>${qwfwqef}</td>
+			<td>${qwfgqergqerg}</td>
+			<td>${qerg}</td>
+			<td>${options}</td>
+			<td>${discerqgqergeqrgeount}</td>
+			<td>${total_price}</td>
+			<td>${carqergeqrg_price}</td>
+			<td>${option_price}</td>
+			<td>${consignment}</td>
+			<td>${goqrgqergods}</td>
+			<td>${add_fee}</td>
+			<td>${model_year}</td>
 			<td ><button type="button" class="btn btn-default btn-pop">변경</button></td>
 			<td>${stock}</td>
 		</tr>
