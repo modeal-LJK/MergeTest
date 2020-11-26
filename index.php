@@ -26,7 +26,7 @@ var load_proc = false;
 var tmp_option_list = "#option_add"; //옵션 영역
 var pr_op_idx = "#PR_OP_IDX";
 
-//주석
+//주석 ㅇㅁㄴ야ㅓㅐ언먀ㅐㅓ앤ㅁ
 
 $(document).ready(function() {
 
