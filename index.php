@@ -13,6 +13,8 @@ var load_proc = false;
 var tmp_option_list = "#option_add"; //옵션 영역
 var pr_op_idx = "#PR_OP_IDX";
 
+//주석
+
 $(document).ready(function() {
 
     refreshList();
@@ -820,24 +822,6 @@ function m_code_list(){
 <script id="tmpl__list" type="text/x-jquery-tmpl">
 		<tr  class="ag_c">
 			<td ><input class="check_box" type="checkbox"></td>
-			<td >${seq_no}</td>
-			<td >${estm_cd}</td>
-			<td >${release_date}</td>
-			<td>${tax_cd}</td>
-			<td>${maker}</td>
-			<td>${model}</td>
-			<td>${lineup}</td>
-			<td>${ext_color}</td>
-			<td>${int_color}</td>
-			<td>${options}</td>
-			<td>${discount}</td>
-			<td>${total_price}</td>
-			<td>${car_price}</td>
-			<td>${option_price}</td>
-			<td>${consignment}</td>
-			<td>${goods}</td>
-			<td>${add_fee}</td>
-			<td>${model_year}</td>
 			<td ><button type="button" class="btn btn-default btn-pop">변경</button></td>
 			<td>${stock}</td>
 		</tr>
