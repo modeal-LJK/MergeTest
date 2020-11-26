@@ -27,6 +27,7 @@ var tmp_option_list = "#option_add"; //옵션 영역
 var pr_op_idx = "#PR_OP_IDX";
 
 //주석 ㄴㅇㅀㅁㄴ 여기는 겹치는 부분
+//주석 ㅇㅁㄴ야ㅓㅐ언먀ㅐㅓ앤ㅁ
 
 $(document).ready(function() {
 
