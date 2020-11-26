@@ -2,6 +2,19 @@
 //error_reporting(E_ALL);
 //ini_set('display_errors', 1);
 require_once $_SERVER["DOCUMENT_ROOT"] ."/_sys_/inc/header_v2.php";
+?>
+<script type="text/javascript">
+//<!--
+var tmp_list = "#list_box"; //리스트 영역
+var page_count = "#page_count"; // 조회 페이징수
+var page_num = "#page_num"; // 현재 페이지
+var load_proc = false;
+var tmp_option_list = "#option_add"; //옵션 영역
+var pr_op_idx = "#PR_OP_IDX";
+
+//주석
+
+//qertqet
 
 ?>
 <script type="text/javascript">
